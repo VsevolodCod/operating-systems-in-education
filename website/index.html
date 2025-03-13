@@ -1,0 +1,936 @@
+<!-- <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Операционные системы в образовании</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #013180; /* Белый фон */
+            color: #ffffff; /* Белый текст */
+        }
+
+        header {
+            background: #071D42; 
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: #071D42; /* Темный фон контейнера */
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .box-container {
+            display: flex; /* Горизонтальное расположение */
+            justify-content: space-between; /* Равномерное распределение */
+            gap: 20px; /* Расстояние между контейнерами */
+        }
+
+        .box {
+            border: 2px solid #194A99; /* Синяя обводка */
+            padding: 15px;
+            border-radius: 8px; /* Закругленные углы */
+            background-color: #013180; /* Темный фон для контейнеров */
+            flex: 1; /* Равномерное распределение ширины */
+        }
+
+        h1, h2 {
+            color: rgb(255, 255, 255); /* Белый цвет заголовков */
+        }
+
+        ul {
+            list-style-type: disc;
+            margin: 20px 0;
+            padding-left: 40px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #645757;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Операционные системы в образовании: выбор и преимущества</h1>
+        <p>Изучите разнообразие операционных систем, их типы и преимущества для образовательного процесса. Подберите оптимальную ОС для ваших учебных задач!</p>
+    </header>
+
+    <div class="container">
+        <h2>Что такое операционная система?</h2>
+        <p>Операционная система (ОС) — это комплекс программ, управляющих аппаратными ресурсами компьютера и обеспечивающих среду для выполнения прикладных программ. Она выступает посредником между пользователем и "железом", делая работу с компьютером удобной и эффективной.</p>
+
+        <div class="box-container">
+            <div class="box">
+                <h2>Управление ресурсами</h2>
+                <p>ОС распределяет ресурсы, такие как процессорное время, память и устройства ввода/вывода, между различными программами и пользователями.</p>
+            </div>
+
+            <div class="box">
+                <h2>Обеспечение безопасности</h2>
+                <p>ОС защищает систему от несанкционированного доступа.</p>
+            </div>
+
+            <div class="box">
+                <h2>Предоставление интерфейса</h2>
+                <p>ОС предоставляет пользователю интерфейс для взаимодействия с компьютером (графический или текстовый).</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Типы операционных систем по назначению</h2>
+        <p>В зависимости от задач, для которых они предназначены, операционные системы делятся на универсальные и специализированные. Каждый тип имеет свои особенности и преимущества.</p>
+
+        <div class="box-container">
+            <div class="box">
+                <h2>Универсальные ОС</h2>
+                <p>Предназначены для широкого круга задач, таких как работа с документами, мультимедиа, интернет-серфинг и программирование. Примеры: Windows, macOS, Linux.</p>
+            </div>
+
+            <div class="box">
+                <h2>Специализированные ОС</h2>
+                <p>Разработаны для конкретных устройств или задач, например, ОС для смартфонов (Android, iOS), серверов (Linux, Windows Server), встроенных систем (QNX, VxWorks).</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Операционные системы в образовании</p>
+    </footer>
+</body>
+</html>
+
+
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!DOCTYPE html>
+ <html lang="ru">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Операционные системы в образовании</title>
+     <!-- Подключение Leaflet CSS -->
+     <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/> -->
+     <style>
+         body {
+             font-family: Arial, sans-serif;
+             line-height: 1.6;
+             margin: 0;
+             padding: 0;
+             background-color: #071D42; /* Темный фон */
+             color: #ffffff; /* Белый текст */
+         }
+ 
+         header {
+             background: #013180; /* Темно-синий фон */
+             color: white;
+             padding: 20px 0;
+             text-align: center;
+         }
+ 
+         nav {
+             background: #194A99; /* Синий фон для навигации */
+             padding: 10px;
+             text-align: center;
+         }
+ 
+         nav a {
+             color: white;
+             margin: 0 15px;
+             text-decoration: none;
+             font-weight: bold;
+         }
+ 
+         nav a:hover {
+             color: #F5EC9B; /* Желтый цвет при наведении */
+         }
+ 
+         .container {
+             width: 80%;
+             margin: 20px auto;
+             padding: 20px;
+             background: #194A99; /* Синий фон контейнера */
+             border-radius: 8px;
+             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         }
+ 
+         h1, h2, h3 {
+             color: #F5EC9B; /* Желтый цвет заголовков */
+         }
+ 
+         p {
+             color: #ffffff; /* Белый текст */
+         }
+ 
+         .box-container {
+             display: flex;
+             justify-content: space-between;
+             gap: 20px;
+             margin-top: 20px;
+         }
+ 
+         .box {
+             border: 2px solid #F5EC9B; /* Желтая обводка */
+             padding: 15px;
+             border-radius: 8px;
+             background-color: #013180; /* Темный фон для контейнеров */
+             flex: 1;
+             text-align: center;
+             transition: transform 0.3s ease, box-shadow 0.3s ease;
+         }
+ 
+         .box:hover {
+             transform: scale(1.05);
+             box-shadow: 0 0 15px rgba(245, 236, 155, 0.5);
+         }
+ 
+         .graph {
+             width: 100%;
+             max-width: 600px;
+             margin: 20px auto;
+             display: block;
+             border-radius: 8px;
+             transition: opacity 0.3s ease;
+         }
+ 
+         .graph:hover {
+             opacity: 0.8;
+         }
+ 
+         table {
+             width: 100%;
+             border-collapse: collapse;
+             margin: 20px 0;
+         }
+ 
+         table, th, td {
+             border: 1px solid #F5EC9B; /* Желтая обводка */
+         }
+ 
+         th, td {
+             padding: 10px;
+             text-align: center;
+         }
+ 
+         th {
+             background-color: #013180; /* Темный фон для заголовков таблицы */
+         }
+ 
+         footer {
+             text-align: center;
+             padding: 20px 0;
+             background-color: #013180; /* Темно-синий фон */
+             color: white;
+             margin-top: 20px;
+         }
+ 
+         #map {
+             height: 400px;
+             border-radius: 8px;
+         }
+ 
+
+ 
+         #quiz button {
+             background-color: #F5EC9B;
+             color: #013180;
+             border: none;
+             padding: 10px 20px;
+             border-radius: 5px;
+             cursor: pointer;
+         }
+ 
+         #quiz button:hover {
+             background-color: #e0d68a;
+         }
+ 
+         #countdown {
+             font-size: 24px;
+             color: #F5EC9B;
+             margin: 20px 0;
+         }
+ 
+         form label {
+             display: block;
+             margin: 10px 0 5px;
+         }
+ 
+         form input, form textarea {
+             width: 100%;
+             padding: 10px;
+             margin-bottom: 10px;
+             border-radius: 5px;
+             border: 1px solid #F5EC9B;
+             background-color: #013180;
+             color: white;
+         }
+ 
+         form button {
+             background-color: #F5EC9B;
+             color: #013180;
+             border: none;
+             padding: 10px 20px;
+             border-radius: 5px;
+             cursor: pointer;
+         }
+ 
+         form button:hover {
+             background-color: #e0d68a;
+         }
+     </style>
+ </head>
+ <body>
+     <header>
+         <h1>Операционные системы в образовании</h1>
+         <p>Исследование преимуществ и недостатков Windows, macOS и Linux для учебного процесса</p>
+     </header>
+ 
+     <nav>
+         <a href="#home">Главная</a>
+         <a href="#about">Об ОС</a>
+         <a href="#research">Исследование</a>
+         <a href="#comparison">Сравнение ОС</a>
+         <a href="#recommendations">Рекомендации</a>
+         <a href="#quiz">Тест</a>
+         <a href="#feedback">Обратная связь</a>
+     </nav>
+ 
+     <div id="home" class="container">
+         <h2>Главная</h2>
+         <p>Добро пожаловать на сайт, посвященный исследованию операционных систем в образовании. Здесь вы найдете информацию о том, какие ОС используются в учебном процессе, их преимущества и недостатки, а также рекомендации по выбору.</p>
+     </div>
+ 
+     <div id="about" class="container">
+         <h2>Что такое операционная система?</h2>
+         <p>Операционная система (ОС) — это программное обеспечение, которое управляет ресурсами компьютера и обеспечивает работу приложений. Она связывает пользователя с "железом" и делает работу с компьютером удобной.</p>
+         <div class="box-container">
+             <div class="box">
+                 <h2>Управление ресурсами</h2>
+                 <p>ОС распределяет ресурсы, такие как процессорное время, память и устройства ввода/вывода, между различными программами и пользователями.</p>
+             </div>
+             <div class="box">
+                 <h2>Обеспечение безопасности</h2>
+                 <p>ОС защищает систему от несанкционированного доступа.</p>
+             </div>
+             <div class="box">
+                 <h2>Предоставление интерфейса</h2>
+                 <p>ОС предоставляет пользователю интерфейс для взаимодействия с компьютером (графический или текстовый).</p>
+             </div>
+         </div>
+     </div>
+ 
+     <div id="research" class="container">
+         <h2>Мое исследование</h2>
+         <p>Я провел опрос среди учащихся и преподавателей, чтобы выяснить, какие ОС они используют и какие преимущества видят в каждой из них. Вот основные результаты:</p>
+         
+         <h3>Используемые операционные системы</h3>
+         <img src="Графики/1график.png" alt="График использования ОС" class="graph">
+         <p>Большинство участников используют Windows (80%), Linux — 30%, а macOS — 10%.</p>
+ 
+         <h3>Преимущества ОС</h3>
+         <img src="Графики/2график.png" alt="График преимуществ ОС" class="graph">
+         <p>Windows ценится за доступ к приложениям, Linux — за безопасность, а macOS — за удобство интерфейса.</p>
+ 
+         <h3>Технические проблемы</h3>
+         <img src="Графики/3график.png" alt="График технических проблем" class="graph">
+         <p>50% респондентов сталкиваются с проблемами редко, 30% — иногда.</p>
+ 
+         <h3>Влияние на продуктивность</h3>
+         <img src="Графики/4график.png" alt="График влияния на продуктивность" class="graph">
+         <p>40% участников оценивают влияние ОС на продуктивность как положительное.</p>
+     </div>
+ 
+     <div id="comparison" class="container">
+         <h2>Сравнение ОС</h2>
+         <table>
+             <tr>
+                 <th>Критерий</th>
+                 <th>Windows</th>
+                 <th>macOS</th>
+                 <th>Linux</th>
+             </tr>
+             <tr>
+                 <td>Доступность</td>
+                 <td>Широкая распространенность</td>
+                 <td>Высокая стоимость</td>
+                 <td>Бесплатность</td>
+             </tr>
+             <tr>
+                 <td>Безопасность</td>
+                 <td>Уязвима к вирусам</td>
+                 <td>Высокая безопасность</td>
+                 <td>Высокая безопасность</td>
+             </tr>
+             <tr>
+                 <td>Удобство интерфейса</td>
+                 <td>Интуитивно понятный</td>
+                 <td>Эстетичный и удобный</td>
+                 <td>Зависит от дистрибутива</td>
+             </tr>
+             <tr>
+                 <td>Поддержка приложений</td>
+                 <td>Широкая поддержка</td>
+                 <td>Ограниченная совместимость</td>
+                 <td>Ограниченная поддержка</td>
+             </tr>
+         </table>
+     </div>
+ 
+     <div id="recommendations" class="container">
+         <h2>Рекомендации</h2>
+         <p>На основе исследования я рекомендую:</p>
+         <ul>
+             <li><strong>Windows</strong>: Для большинства учебных задач, особенно если нужен доступ к широкому спектру приложений.</li>
+             <li><strong>Linux</strong>: Для программирования и IT-образования, а также для тех, кто ценит безопасность и гибкость.</li>
+             <li><strong>macOS</strong>: Для творческих задач, таких как работа с графикой и видео.</li>
+         </ul>
+     </div>
+ 
+     <div id="quiz" class="container">
+         <h2>Тест: Какая ОС подходит вам?</h2>
+         <div id="questions"></div>
+         <button onclick="showResult()">Узнать результат</button>
+         <p id="result"></p>
+     </div>
+ 
+     <!-- <div id="map" class="container">
+         <h2>Карта использования ОС в мире</h2>
+         <div id="map"></div>
+     </div>
+  -->
+     <!-- <div id="feedback" class="container">
+         <h2>Обратная связь</h2>
+         <form>
+             <label for="name">Имя:</label>
+             <input type="text" id="name" name="name" required>
+             <label for="email">Email:</label>
+             <input type="email" id="email" name="email" required>
+             <label for="message">Сообщение:</label>
+             <textarea id="message" name="message" required></textarea>
+             <button type="submit">Отправить</button>
+         </form>
+     </div>
+  -->
+     <div class="container">
+         <h2>До конца учебного года осталось:</h2>
+         <div id="countdown"></div>
+     </div>
+ 
+     <footer>
+         <p>&copy; 2025 Операционные системы в образовании</p>
+     </footer>
+ 
+     <!-- Подключение Leaflet JavaScript -->
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+ 
+     <script>
+         // Тест
+         const questions = [
+             { question: "Как часто вы работаете с графикой?", options: ["Часто", "Редко", "Никогда"] },
+             { question: "Важен ли для вас бюджет?", options: ["Да", "Нет"] },
+             { question: "Нужна ли вам высокая безопасность?", options: ["Да", "Нет"] }
+         ];
+ 
+         let answers = [];
+ 
+         function renderQuiz() {
+             const questionsDiv = document.getElementById('questions');
+             questions.forEach((q, index) => {
+                 const questionDiv = document.createElement('div');
+                 questionDiv.innerHTML = `<p>${q.question}</p>`;
+                 q.options.forEach(option => {
+                     questionDiv.innerHTML += `<label><input type="radio" name="q${index}" value="${option}"> ${option}</label><br>`;
+                 });
+                 questionsDiv.appendChild(questionDiv);
+             });
+         }
+ 
+         function showResult() {
+             answers = [];
+             questions.forEach((q, index) => {
+                 const selected = document.querySelector(`input[name="q${index}"]:checked`);
+                 if (selected) answers.push(selected.value);
+             });
+ 
+             if (answers.includes("Часто") && answers.includes("Нет")) {
+                 document.getElementById('result').innerText = "Вам подходит macOS!";
+             } else if (answers.includes("Да")) {
+                 document.getElementById('result').innerText = "Вам подходит Linux!";
+             } else {
+                 document.getElementById('result').innerText = "Вам подходит Windows!";
+             }
+         }
+ 
+         renderQuiz();
+ 
+         // Таймер
+         const countdownDate = new Date("2025-05-31").getTime();
+         const timer = setInterval(() => {
+             const now = new Date().getTime();
+             const distance = countdownDate - now;
+             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+             document.getElementById('countdown').innerText = `${days} дней`;
+         }, 1000);
+ 
+         // Карта
+        //  var map = L.map('map').setView([51.505, -0.09], 2);
+        //  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        //      maxZoom: 18,
+        //  }).addTo(map);
+ 
+        //  L.marker([55.7558, 37.6176]).addTo(map)
+        //      .bindPopup('Россия: Windows — 70%, Linux — 20%, macOS — 10%')
+        //      .openPopup();
+     </script>
+ </body>
+ </html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Операционные системы в образовании</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff; /* Белый фон */
+            color: #ffffff; /* Белый текст */
+        }
+
+        header {
+            background: #071D42; 
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: #071D42; /* Темный фон контейнера */
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .box-container {
+            display: flex; /* Горизонтальное расположение */
+            justify-content: space-between; /* Равномерное распределение */
+            gap: 20px; /* Расстояние между контейнерами */
+        }
+
+        .box {
+            border: 2px solid #194A99; /* Синяя обводка */
+            padding: 15px;
+            border-radius: 8px; /* Закругленные углы */
+            background-color: #013180; /* Темный фон для контейнеров */
+            flex: 1; /* Равномерное распределение ширины */
+        }
+
+        h1, h2 {
+            color: rgb(255, 255, 255); /* Белый цвет заголовков */
+        }
+
+        ul {
+            list-style-type: disc;
+            margin: 20px 0;
+            padding-left: 40px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #645757;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Операционные системы в образовании: выбор и преимущества</h1>
+        <p>Изучите разнообразие операционных систем, их типы и преимущества для образовательного процесса. Подберите оптимальную ОС для ваших учебных задач!</p>
+    </header>
+
+    <div class="container">
+        <h2>Что такое операционная система?</h2>
+        <p>Операционная система (ОС) — это комплекс программ, управляющих аппаратными ресурсами компьютера и обеспечивающих среду для выполнения прикладных программ. Она выступает посредником между пользователем и "железом", делая работу с компьютером удобной и эффективной.</p>
+
+        <div class="box-container">
+            <div class="box">
+                <h2>Управление ресурсами</h2>
+                <p>ОС распределяет ресурсы, такие как процессорное время, память и устройства ввода/вывода, между различными программами и пользователями.</p>
+            </div>
+
+            <div class="box">
+                <h2>Обеспечение безопасности</h2>
+                <p>ОС защищает систему от несанкционированного доступа.</p>
+            </div>
+
+            <div class="box">
+                <h2>Предоставление интерфейса</h2>
+                <p>ОС предоставляет пользователю интерфейс для взаимодействия с компьютером (графический или текстовый).</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Типы операционных систем по назначению</h2>
+        <p>В зависимости от задач, для которых они предназначены, операционные системы делятся на универсальные и специализированные. Каждый тип имеет свои особенности и преимущества.</p>
+
+        <div class="box-container">
+            <div class="box">
+                <h2>Универсальные ОС</h2>
+                <p>Предназначены для широкого круга задач, таких как работа с документами, мультимедиа, интернет-серфинг и программирование. Примеры: Windows, macOS, Linux.</p>
+            </div>
+
+            <div class="box">
+                <h2>Специализированные ОС</h2>
+                <p>Разработаны для конкретных устройств или задач, например, ОС для смартфонов (Android, iOS), серверов (Linux, Windows Server), встроенных систем (QNX, VxWorks).</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h2>Операционные системы: типы интерфейсов</h2>
+        <p>Интерфейс пользователя – это способ взаимодействия человека с компьютером. Операционные системы предлагают графический и текстовый интерфейсы.</p>
+
+        <div class="box-container">
+            <div class="box">
+                <h2>Графические ОС</h2>
+                <p>Используют визуальные элементы, такие как окна, значки и меню, для взаимодействия с пользователем. Примеры: Windows, macOS.</p>
+            </div>
+
+            <div class="box">
+                <h2>Текстовые ОС</h2>
+                <p>Предоставляют командную строку, где пользователь вводит текстовые команды для управления компьютером. Примеры: DOS, некоторые версии Linux.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Операционные системы в образовании</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Операционные системы</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            /* background-image: url('image/bacground.png'); */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .initial-content {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 20px;
+        }
+
+        .additional-content {
+            display: none;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 20px;
+        }
+
+        h1 {
+        display: block;
+        font-size: 2em;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        unicode-bidi: isolate;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #F5EC98;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #F5EC98;
+        }
+
+        p, ul {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .highlight {
+            color: #F5EC98;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .section {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="initial-content">
+        <div>
+            <h1>Преимущества различных операционных систем в образовании</h1>
+            <p>Что такое операционная система?</p>
+            <p><span class="highlight">Операционная система (ОС)</span> — это программное обеспечение, которое управляет аппаратными ресурсами компьютера и предоставляет среду для выполнения прикладных программ. ОС выступает посредником между пользователем и аппаратным обеспечением, обеспечивая удобное и эффективное использование компьютера.</p>
+        </div>
+    </div>
+
+    <div class="additional-content">
+        <div>
+            <h1>Типы операционных систем:</h1>
+
+            <div class="section">
+                <h2>1. По назначению:</h2>
+                <p>Универсальные ОС: предназначены для широкого круга задач (Windows, macOS, Linux).</p>
+                <p>Специализированные ОС: разработаны для конкретных устройств или задач (например, ОС для смартфонов, серверов, встроенных систем).</p>
+            </div>
+
+            <div class="section">
+                <h2>2. По типу интерфейса:</h2>
+                <p>Графические ОС: с визуальным интерфейсом (Windows, macOS).</p>
+                <p>Текстовые ОС: с командной строкой (например, DOS, некоторые версии Linux).</p>
+            </div>
+
+            <div class="section">
+                <h2>3. По количеству пользователей:</h2>
+                <p>Однопользовательские: рассчитаны на одного пользователя (Windows, macOS).</p>
+                <p>Многопользовательские: поддерживают работу нескольких пользователей одновременно (Linux, UNIX).</p>
+            </div>
+
+            <div class="section">
+                <h2>4. По количеству задач:</h2>
+                <p>Однозадачные: выполняют одну задачу в момент времени (например, MS-DOS).</p>
+                <p>Многозадачные: поддерживают выполнение нескольких задач одновременно (Windows, Linux, macOS).</p>
+            </div>
+        </div>
+        <h1>Популярные операционные системы:</h1>
+
+        <ul>
+            <li>Windows (Microsoft):
+                <ul>
+                    <li>Широко используется на ПК и ноутбуках. Поддерживает множество приложений и игр. Примеры: Windows 10, Windows 11.</li>
+                </ul>
+            </li>
+            <li>Android:
+                <ul>
+                    <li>Операционная система для мобильных устройств (смартфоны, планшеты). Основана на ядре Linux.</li>
+                </ul>
+            </li>
+            <li>macOS (Apple):
+                <ul>
+                    <li>Устанавливается на компьютеры Mac. Известна своей стабильностью и интеграцией с другими продуктами Apple.</li>
+                </ul>
+            </li>
+            <li>iOS (Apple):
+                <ul>
+                    <li>Операционная система для iPhone и iPad. Закрытая система с высокой степенью оптимизации.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const initialContent = document.querySelector('.initial-content');
+            const additionalContent = document.querySelector('.additional-content');
+            const initialContentBottom = initialContent.getBoundingClientRect().bottom;
+
+            if (initialContentBottom < window.innerHeight) {
+                additionalContent.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html> -->
+<!-- 
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Типы операционных систем</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .section {
+            background: white;
+            border: 2px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .section::after {
+            content: '↓';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            color: #333;
+        }
+
+        .section:last-child::after {
+            display: none;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Типы операционных систем:</h1>
+
+        <div class="section">
+            <h2>1. По назначению:</h2>
+            <p>Универсальные ОС: предназначены для широкого круга задач (Windows, macOS, Linux).</p>
+            <p>Специализированные ОС: разработаны для конкретных устройств или задач (например, ОС для смартфонов, серверов, встроенных систем).</p>
+        </div>
+
+        <div class="section">
+            <h2>2. По типу интерфейса:</h2>
+            <p>Графические ОС: с визуальным интерфейсом (Windows, macOS).</p>
+            <p>Текстовые ОС: с командной строкой (например, DOS, некоторые версии Linux).</p>
+        </div>
+
+        <div class="section">
+            <h2>3. По количеству пользователей:</h2>
+            <p>Однопользовательские: рассчитаны на одного пользователя (Windows, macOS).</p>
+            <p>Многопользовательские: поддерживают работу нескольких пользователей одновременно (Linux, UNIX).</p>
+        </div>
+
+        <div class="section">
+            <h2>4. По количеству задач:</h2>
+            <p>Однозадачные: выполняют одну задачу в момент времени (например, MS-DOS).</p>
+            <p>Многозадачные: поддерживают выполнение нескольких задач одновременно (Windows, Linux, macOS).</p>
+        </div>
+    </div>
+</body>
+</html> -->

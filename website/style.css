@@ -1,0 +1,24 @@
+body {
+    background-color: black;
+    margin: 0; /* Убираем отступы по умолчанию */
+    padding: 0; /* Убираем внутренние отступы */
+    height: 50vh; /* Высота body равна высоте экрана */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Центрируем содержимое body */
+}
+
+h1 {
+    color: #F5EC9B;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Центрирование текста по вертикали и горизонтали */
+    width: 50%; /* Ширина элемента h1 равна половине экрана */
+    height: 50; /* Высота элемента h1 равна половине высоты экрана */
+    /* background-image: url('image/bacground.png'); */
+    background-size: cover; /* Растягиваем изображение на всю область */
+    background-position: center; /* Центрируем изображение */
+    margin: 0; /* Убираем внешние отступы */
+    padding: 0; /* Убираем внутренние отступы */
+    text-align: center; /* Центрируем текст */
+}
