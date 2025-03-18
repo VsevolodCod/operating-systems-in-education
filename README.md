@@ -47,4 +47,4 @@ Google Forms: Проведение опроса.
 
 ## Автор
 Ваше имя: VsevolodCod
-Email: vsevolod.prisekin2008@mail.ru
+Email: vsevolod.prisekin2008@mail.rugit
